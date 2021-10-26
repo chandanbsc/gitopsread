@@ -24,6 +24,9 @@ spec:
 {{- end }}
       paths:
       - backend:
-          serviceName: {{ $fullName }}
-          servicePort: {{ $svcPort }}
+          service:
+            name: {{ $fullName }}
+            port: 
+              number: {{ $svcPort }}
+        pathType: ImplementationSpecific
 {{- end }}
